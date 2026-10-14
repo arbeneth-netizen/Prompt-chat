@@ -1,0 +1,21 @@
+{
+  "enableAllProjectMcpServers": true,
+  "permissions": {
+    "allow": [
+      "mcp__prompts-chat__search_prompts",
+      "mcp__prompts-chat__get_prompt"
+    ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Erinnerung (CLAUDE.md): Suche zuerst mit mcp__prompts-chat__search_prompts den passenden Prompt für dieses Anliegen und wende ihn an.'"
+          }
+        ]
+      }
+    ]
+  }
+}
